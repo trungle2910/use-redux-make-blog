@@ -11,6 +11,9 @@ const PublicNavbar = () => {
   const goHome = () => {
     history.push("/");
   };
+  const logOut = () => {
+    history.push("/login");
+  };
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand>
@@ -24,6 +27,9 @@ const PublicNavbar = () => {
           <Nav.Link href="/login">Login</Nav.Link>
         )}
         <Nav.Link href="/register">Register</Nav.Link>
+        <Nav.Link onClick={logOut} href="/login">
+          Log Out
+        </Nav.Link>
       </Nav>
     </Navbar>
   );
